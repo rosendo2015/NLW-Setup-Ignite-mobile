@@ -23,10 +23,10 @@ const isCurrentDate = dayjs(date).isSame(toDay)
       className={clsx("rounded-lg border-2 m-1",{
         ["bg-zinc-900 border-zinc-800"] : amountAccomplshedPercentage === 0,
         ["bg-violet-900 border-violet-700"]: amountAccomplshedPercentage > 0 && amountAccomplshedPercentage < 20,
-          ["bg-violet-800 border-violet-600"]: amountAccomplshedPercentage > 20 && amountAccomplshedPercentage < 40,
-          ["bg-violet-700 border-violet-500"]: amountAccomplshedPercentage > 40 && amountAccomplshedPercentage < 60,
-          ["bg-violet-600 border-violet-500"]: amountAccomplshedPercentage > 60 && amountAccomplshedPercentage < 80,
-          ["bg-violet-500 border-violet-400"]: amountAccomplshedPercentage > 80,
+          ["bg-violet-800 border-violet-600"]: amountAccomplshedPercentage >= 20 && amountAccomplshedPercentage < 40,
+          ["bg-violet-700 border-violet-500"]: amountAccomplshedPercentage >= 40 && amountAccomplshedPercentage < 60,
+          ["bg-violet-600 border-violet-500"]: amountAccomplshedPercentage >= 60 && amountAccomplshedPercentage < 80,
+          ["bg-violet-500 border-violet-400"]: amountAccomplshedPercentage >= 80,
           ["border-white border-4"]: isCurrentDate
       })}
       style={{ width: DAY_SIZE, height: DAY_SIZE }}
